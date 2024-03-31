@@ -1,9 +1,10 @@
 package com.example.demo.controller;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,8 @@ import com.example.demo.repository.EmployeeRepository;
 
 @RestController
 public class EmployeeController {
+	
+	public static final Logger LOGGER = LoggerFactory.getLogger(EmployeeController.class);
 	
 	@Autowired
 	EmployeeRepository employeeRepository; 
